@@ -1,25 +1,25 @@
 {
-  "name": "angular-ui-slider",
-  "version": "0.1.0",
-  "description": "This directive allows you to add a slider to your form elements.",
-  "author": "https://github.com/angular-ui/ui-slider/graphs/contributors",
+  "name": "angularjs-aside-menu",
+  "description": "aside menu with json data",
+  "author": {
+    "name": "Robert Gurgul"
+  },
+  "version": "0.0.1",
+  "homepage": "https://github.com/rgurgul/aside-menu",
   "license": "MIT",
-  "homepage": "http://angular-ui.github.com",
   "main": [
     "src/aside.menu.js"
   ],
   "ignore": [
     "**/.*",
     "node_modules",
-    "components",
-    "test*",
     "demo*",
-    "gruntFile.js",
     "package.json"
   ],
   "dependencies": {
-    "angular": ">=1.0.0 <1.4.0",
-    "jquery-ui": "~1.10.x",
-    "jquery": ">= 1.9"
+    "angular": "latest",
+    "jquery": "latest",
+    "font-awesome": "latest",
+    "bootstrap": "latest"
   }
 }
