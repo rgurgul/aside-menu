@@ -1,0 +1,13 @@
+{
+  "name": "aside.menu",
+  "description": "aside menu with json data",
+  "version": "0.0.1",
+  "homepage": "helloworld.edu.pl",
+  "license": "MIT",
+  "dependencies": {
+    "angular": "latest",
+    "jquery": "latest",
+    "font-awesome": "latest",
+    "bootstrap": "latest"
+  }
+}
