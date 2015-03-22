@@ -4,6 +4,15 @@
   "version": "0.0.1",
   "homepage": "helloworld.edu.pl",
   "license": "MIT",
+  "main": [
+    "src/aside.menu.js"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "demo*",
+    "package.json"
+  ],
   "dependencies": {
     "angular": "latest",
     "jquery": "latest",
