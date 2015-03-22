@@ -1,8 +1,11 @@
 {
-  "name": "aside.menu",
+  "name": "aside-menu",
   "description": "aside menu with json data",
+  "author": {
+    "name": "Robert Gurgul"
+  },
   "version": "0.0.1",
-  "homepage": "helloworld.edu.pl",
+  "homepage": "https://github.com/rgurgul/aside-menu",
   "license": "MIT",
   "main": [
     "src/aside.menu.js"
