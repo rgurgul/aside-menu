@@ -7,7 +7,7 @@ angular.module('aside.menu', ['menu-tpl.html', 'menu-item-tpl.html'])
             controller: function ($scope, $element, $attrs) {
                 $http.get($attrs.items)
                     .success(function (responseData) {
-                        $scope.items = responseData;
+                        $scope.items = responseData.data;
                     });
                 this.goToUrl = function (link) {
                     $location.path(link);
