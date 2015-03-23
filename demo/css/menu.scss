@@ -1,0 +1,51 @@
+.menu-container {
+  .menu-main {
+    .list-group-item {
+      border-radius: 0;
+      border-left: 0;
+      border-right: 0;
+      border-color: #000000;
+    }
+    li {
+      padding: 0;
+      font-weight: 400;
+      color: silver;
+    }
+    .menu-item-box {
+      cursor: pointer;
+      background-color: #2F4050;
+      .menu-item {
+        padding: 14px 10px;
+        &:hover {
+          color: white;
+        }
+        .fa {
+          padding: 3px;
+          &.pull-right {
+            font-size: 12px;
+            margin-top: 3px;
+          }
+        }
+      }
+    }
+    .submenu {
+      margin: 0;
+      padding: 0;
+      li {
+        line-height: 24px;
+        border-top: 1px solid #2F4050;
+        color: black;
+        .menu-item {
+          padding: 8px 10px;
+          .fa {
+            padding: 5px;
+          }
+        }
+      }
+    }
+    .active {
+      background-color: #18A689 !important;
+      color: white !important;
+    }
+  }
+}

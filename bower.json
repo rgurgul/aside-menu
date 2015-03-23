@@ -1,0 +1,25 @@
+{
+  "name": "angularjs-aside-menu",
+  "description": "aside menu with json data",
+  "author": {
+    "name": "Robert Gurgul"
+  },
+  "version": "0.0.1",
+  "homepage": "https://github.com/rgurgul/aside-menu",
+  "license": "MIT",
+  "main": [
+    "src/aside.menu.js"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "demo*",
+    "package.json"
+  ],
+  "dependencies": {
+    "angular": "latest",
+    "jquery": "latest",
+    "font-awesome": "latest",
+    "bootstrap": "latest"
+  }
+}
