@@ -8,7 +8,8 @@
   "homepage": "https://github.com/rgurgul/aside-menu",
   "license": "MIT",
   "main": [
-    "src/aside.menu.js"
+    "src/aside.menu.js",
+    "demo/*"
   ],
   "ignore": [
     "**/.*",
