@@ -13,9 +13,7 @@
   ],
   "ignore": [
     "**/.*",
-    "node_modules",
-    "demo*",
-    "package.json"
+    "libs"
   ],
   "dependencies": {
     "angular": "latest",
