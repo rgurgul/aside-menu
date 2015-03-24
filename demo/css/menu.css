@@ -11,7 +11,7 @@
   cursor: pointer;
   background-color: #2F4050; }
   .menu-container .menu-main .menu-item-box .menu-item {
-    padding: 14px 10px; }
+    padding: 10px; }
     .menu-container .menu-main .menu-item-box .menu-item:hover {
       color: white; }
     .menu-container .menu-main .menu-item-box .menu-item .fa {
@@ -27,7 +27,7 @@
     border-top: 1px solid #2F4050;
     color: black; }
     .menu-container .menu-main .submenu li .menu-item {
-      padding: 8px 10px; }
+      padding: 6px 10px; }
       .menu-container .menu-main .submenu li .menu-item .fa {
         padding: 5px; }
 .menu-container .menu-main .active {
