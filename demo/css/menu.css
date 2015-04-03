@@ -1,8 +1,13 @@
+body {
+  font-family: "open sans", sans-serif;
+  font-size: 13px;
+  color: #676a6c; }
+
 .menu-container .menu-main .list-group-item {
   border-radius: 0;
   border-left: 0;
   border-right: 0;
-  border-color: #000000; }
+  border-color: #233645; }
 .menu-container .menu-main li {
   padding: 0;
   font-weight: 400;
@@ -24,14 +29,13 @@
   padding: 0; }
   .menu-container .menu-main .submenu li {
     line-height: 24px;
-    border-top: 1px solid #2F4050;
-    color: black; }
+    border-top: 1px solid #2F4050; }
     .menu-container .menu-main .submenu li .menu-item {
       padding: 6px 10px; }
       .menu-container .menu-main .submenu li .menu-item .fa {
         padding: 5px; }
 .menu-container .menu-main .active {
-  background-color: #18A689 !important;
+  border-left: 3px solid #18A689;
   color: white !important; }
 
 /*# sourceMappingURL=menu.css.map */

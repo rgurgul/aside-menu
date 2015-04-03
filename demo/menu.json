@@ -3,30 +3,30 @@
   "data": [
     {
       "index": 0,
-      "id": "produkty",
-      "name": "PRODUKTY",
-      "link": "/products",
+      "id": "products",
+      "name": "Produkty",
+      "link": "products",
       "icon": "fa-beer"
     },
     {
       "index": 1,
       "id": "sklepy",
-      "name": "SKLEPY",
-      "link": "",
+      "name": "Sklepy",
+      "link": "shops",
       "icon": "fa-shopping-cart",
       "submenu": [
         {
           "index": "shop1",
           "id": "katowice",
-          "link": "/shops/shop1",
-          "name": "KATOWICE",
+          "link": "shops.item({id: 'shop1'})",
+          "name": "Katowice",
           "icon": "fa-building-o"
         },
         {
           "index": "shop2",
           "id": "warszawa",
-          "link": "/shops/shop2",
-          "name": "WARSZAWA",
+          "link": "shops.item({id: 'shop2'})",
+          "name": "Warszawa",
           "icon": "fa-building-o"
         }
       ]
@@ -34,15 +34,15 @@
     {
       "index": 2,
       "id": "contact",
-      "name": "KONTAKT",
-      "link": "/contact",
+      "name": "Kontakt",
+      "link": "contact",
       "icon": "fa-envelope"
     },
     {
       "index": 3,
       "id": "faq",
-      "name": "FAQ",
-      "link": "/faq",
+      "name": "Faq",
+      "link": "faq",
       "icon": "fa-info-circle"
     }
   ]

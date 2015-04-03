@@ -1,10 +1,15 @@
+body {
+  font-family: "open sans", sans-serif;
+  font-size: 13px;
+  color: #676a6c;
+}
 .menu-container {
   .menu-main {
     .list-group-item {
       border-radius: 0;
       border-left: 0;
       border-right: 0;
-      border-color: #000000;
+      border-color: #233645;
     }
     li {
       padding: 0;
@@ -34,7 +39,6 @@
       li {
         line-height: 24px;
         border-top: 1px solid #2F4050;
-        color: black;
         .menu-item {
           padding: 6px 10px;
           .fa {
@@ -44,7 +48,7 @@
       }
     }
     .active {
-      background-color: #18A689 !important;
+      border-left: 3px solid #18A689;
       color: white !important;
     }
   }
