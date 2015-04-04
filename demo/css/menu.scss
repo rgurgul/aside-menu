@@ -3,53 +3,51 @@ body {
   font-size: 13px;
   color: #676a6c;
 }
-.menu-container {
-  .menu-main {
-    .list-group-item {
-      border-radius: 0;
-      border-left: 0;
-      border-right: 0;
-      border-color: #233645;
+.menu-main {
+  .list-group-item {
+    border-radius: 0;
+    border-left: 0;
+    border-right: 0;
+    border-color: #233645;
+  }
+  li {
+    padding: 0;
+    font-weight: 400;
+    color: silver;
+  }
+  .menu-item-box {
+    cursor: pointer;
+    background-color: #2F4050;
+    .menu-item {
+      padding: 10px;
+      &:hover {
+        color: white;
+      }
+      .fa {
+        padding: 3px;
+        &.pull-right {
+          font-size: 12px;
+          margin-top: 3px;
+        }
+      }
     }
+  }
+  .submenu {
+    margin: 0;
+    padding: 0;
     li {
-      padding: 0;
-      font-weight: 400;
-      color: silver;
-    }
-    .menu-item-box {
-      cursor: pointer;
-      background-color: #2F4050;
+      line-height: 24px;
+      border-top: 1px solid #2F4050;
       .menu-item {
-        padding: 10px;
-        &:hover {
-          color: white;
-        }
+        padding: 6px 10px;
         .fa {
-          padding: 3px;
-          &.pull-right {
-            font-size: 12px;
-            margin-top: 3px;
-          }
+          padding: 5px;
         }
       }
     }
-    .submenu {
-      margin: 0;
-      padding: 0;
-      li {
-        line-height: 24px;
-        border-top: 1px solid #2F4050;
-        .menu-item {
-          padding: 6px 10px;
-          .fa {
-            padding: 5px;
-          }
-        }
-      }
-    }
-    .active {
-      border-left: 3px solid #18A689;
-      color: white !important;
-    }
+  }
+  .active {
+    border-left: 3px solid #18A689;
+    color: white !important;
   }
 }

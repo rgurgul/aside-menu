@@ -35,10 +35,12 @@
                             url: '/products'
                         })
                         .state('shops', {
-                            url: '/shops'
+                            url: '/shops',
+                            template: '<ui-view></ui-view>'
                         })
                         .state('shops.item', {
-                            url: '/:id'
+                            url: '/:id',
+                            template: 'shop jakis'
                         })
                         .state('contact', {
                             url: '/contact'

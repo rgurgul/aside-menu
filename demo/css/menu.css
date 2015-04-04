@@ -3,38 +3,38 @@ body {
   font-size: 13px;
   color: #676a6c; }
 
-.menu-container .menu-main .list-group-item {
+.menu-main .list-group-item {
   border-radius: 0;
   border-left: 0;
   border-right: 0;
   border-color: #233645; }
-.menu-container .menu-main li {
+.menu-main li {
   padding: 0;
   font-weight: 400;
   color: silver; }
-.menu-container .menu-main .menu-item-box {
+.menu-main .menu-item-box {
   cursor: pointer;
   background-color: #2F4050; }
-  .menu-container .menu-main .menu-item-box .menu-item {
+  .menu-main .menu-item-box .menu-item {
     padding: 10px; }
-    .menu-container .menu-main .menu-item-box .menu-item:hover {
+    .menu-main .menu-item-box .menu-item:hover {
       color: white; }
-    .menu-container .menu-main .menu-item-box .menu-item .fa {
+    .menu-main .menu-item-box .menu-item .fa {
       padding: 3px; }
-      .menu-container .menu-main .menu-item-box .menu-item .fa.pull-right {
+      .menu-main .menu-item-box .menu-item .fa.pull-right {
         font-size: 12px;
         margin-top: 3px; }
-.menu-container .menu-main .submenu {
+.menu-main .submenu {
   margin: 0;
   padding: 0; }
-  .menu-container .menu-main .submenu li {
+  .menu-main .submenu li {
     line-height: 24px;
     border-top: 1px solid #2F4050; }
-    .menu-container .menu-main .submenu li .menu-item {
+    .menu-main .submenu li .menu-item {
       padding: 6px 10px; }
-      .menu-container .menu-main .submenu li .menu-item .fa {
+      .menu-main .submenu li .menu-item .fa {
         padding: 5px; }
-.menu-container .menu-main .active {
+.menu-main .active {
   border-left: 3px solid #18A689;
   color: white !important; }
 

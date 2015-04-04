@@ -2,45 +2,35 @@
   "status": "OK",
   "data": [
     {
-      "index": 0,
-      "id": "products",
       "name": "Produkty",
       "link": "products",
       "icon": "fa-beer"
     },
     {
-      "index": 1,
-      "id": "sklepy",
       "name": "Sklepy",
-      "link": "shops",
+      "link": "",
       "icon": "fa-shopping-cart",
       "submenu": [
         {
           "index": "shop1",
-          "id": "katowice",
-          "link": "shops.item({id: 'shop1'})",
+          "link": "shops.item",
           "name": "Katowice",
           "icon": "fa-building-o"
         },
         {
           "index": "shop2",
-          "id": "warszawa",
-          "link": "shops.item({id: 'shop2'})",
+          "link": "shops.item",
           "name": "Warszawa",
           "icon": "fa-building-o"
         }
       ]
     },
     {
-      "index": 2,
-      "id": "contact",
       "name": "Kontakt",
       "link": "contact",
       "icon": "fa-envelope"
     },
     {
-      "index": 3,
-      "id": "faq",
       "name": "Faq",
       "link": "faq",
       "icon": "fa-info-circle"
