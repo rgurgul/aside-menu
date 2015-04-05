@@ -47,6 +47,7 @@ angular.module('aside.menu', ['menu-tpl.html', 'menu-item-tpl.html', 'ui.router'
                         $state.go(attrs.link, {'id': attrs.index});
                         $('.active', '.menu-main').removeClass('active');
                         element.addClass('active');
+                        scope.$emit('stateChanged');
                     }
                     var submenu = $(element).next(),
                         subItem = element.hasClass('sub-item');
