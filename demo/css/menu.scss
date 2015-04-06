@@ -1,9 +1,10 @@
-body {
-  font-family: "open sans", sans-serif;
-  font-size: 13px;
-  color: #676a6c;
-}
 .menu-main {
+  position: relative;
+  .mini {
+    position:absolute;
+    top: -32px;
+    right: 0;
+  }
   .list-group-item {
     border-radius: 0;
     border-left: 0;

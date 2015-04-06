@@ -6,19 +6,21 @@ angular.module('aside.menu', ['menu-tpl.html', 'menu-item-tpl.html', 'ui.router'
     .directive('asideMenu', function ($http) {
         return {
             restrict: 'E',
-            transclude: true,
             templateUrl: "menu-tpl.html",
             controller: function ($scope, $element, $attrs) {
                 $http.get($attrs.items)
                     .success(function (responseData) {
                         $scope.items = responseData.data;
                     });
-                this.toggleSubmenu = function (el, icon, cleanSubmenu) {
+                $scope.$on('menu::toggle', function () {
+                    $element.parent().toggleClass('visible-md').toggleClass('visible-lg');
+                });
+                this.toggleSubmenu = function (el, iconContainer, cleanSubmenu) {
                     el.slideToggle();
-                    var rightIcon = $('.fa.pull-right', icon);
+                    var rightIcon = $('.fa.pull-right', iconContainer);
                     rightIcon.toggleClass('fa-chevron-right fa-chevron-down');
                     this.activeSubmenu = cleanSubmenu ? undefined : el;
-                }
+                };
             }
         }
     })
@@ -39,15 +41,14 @@ angular.module('aside.menu', ['menu-tpl.html', 'menu-item-tpl.html', 'ui.router'
                     } else if (!$state.params.id && $state.current.name === attrs.link) {
                         element.addClass('active');
                     }
-                })
+                });
 
-                scope.$state = $state;
                 element.bind('click', function (evt) {
                     if (attrs.link) {
                         $state.go(attrs.link, {'id': attrs.index});
                         $('.active', '.menu-main').removeClass('active');
                         element.addClass('active');
-                        scope.$emit('stateChanged');
+                        scope.$emit('menu::toggle');
                     }
                     var submenu = $(element).next(),
                         subItem = element.hasClass('sub-item');
@@ -78,7 +79,7 @@ angular.module('aside.menu', ['menu-tpl.html', 'menu-item-tpl.html', 'ui.router'
 
 angular.module("menu-tpl.html", []).run(function ($templateCache) {
     $templateCache.put("menu-tpl.html",
-        "<div class=\"menu-main\">\n    <ul class=\'list-group list-unstyled\'>\n        <li ng-repeat=\"item in items\" class=\"list-group-item menu-item-box no-select\">\n            <menu-item class=\"menu-item\" link=\"{{item.link}}\" index=\"{{item.index}}\">\n                <i class=\"fa {{item.icon}} pull-left\"></i>\n            </menu-item>\n            <ul ng-if=\"item.submenu\" class=\"submenu list-unstyled\" style=\"display: none\">\n                <li ng-repeat=\"item in item.submenu\">\n                    <menu-item class=\"menu-item sub-item\" link=\"{{item.link}}\" index=\"{{item.index}}\" score=\"{{item.score}}\">\n                        <i class=\"fa {{item.icon}} pull-left\"></i>\n                    </menu-item>\n                </li>\n            </ul>\n        </li>\n    </ul>\n</div>");
+        "<div class=\"menu-main\">\n    <i class=\"mini fa fa-arrow-circle-left pull-right fa-3x visible-xs visible-sm\"\n       ng-click=\"$broadcast(\'menu::toggle\')\"></i>\n    <ul class=\'list-group list-unstyled\'>\n        <li ng-repeat=\"item in items\" class=\"list-group-item menu-item-box no-select\">\n            <menu-item class=\"menu-item\" link=\"{{item.link}}\" index=\"{{item.index}}\">\n                <i class=\"fa {{item.icon}} pull-left\"></i>\n            </menu-item>\n            <ul ng-if=\"item.submenu\" class=\"submenu list-unstyled\" style=\"display: none\">\n                <li ng-repeat=\"item in item.submenu\">\n                    <menu-item class=\"menu-item sub-item\" link=\"{{item.link}}\" index=\"{{item.index}}\" score=\"{{item.score}}\">\n                        <i class=\"fa {{item.icon}} pull-left\"></i>\n                    </menu-item>\n                </li>\n            </ul>\n        </li>\n    </ul>\n</div>");
 });
 
 angular.module("menu-item-tpl.html", []).run(function ($templateCache) {

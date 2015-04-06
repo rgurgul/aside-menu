@@ -13,26 +13,32 @@
     <script src="../libs/jquery/dist/jquery.js"></script>
     <script src="../src/aside.menu.js"></script>
 </head>
-<body ng-app="aside.menu">
+<body ng-app="aside.menu"
+      style="font-family: 'open sans', sans-serif;font-size: 13px; color: #676a6c;">
 
-<div style="background-color: #293846; width: 240px; height: 100%; position: fixed;">
-    <p>
-    <h4 style="color: white; padding: 13px;">Example user</h4>
-    </p>
+<div class="pull-left visible-md visible-lg"
+     style="background-color: #293846; width: 240px; height: 100%; position: fixed;">
+    <br/>
     <br/>
     <aside-menu items="menu.json"></aside-menu>
 </div>
 
-<div style="margin-left: 333px;">
-    <ui-view>123</ui-view>
+<div style="margin-left: 300px;">
+    <ui-view></ui-view>
 </div>
+
+<a class="btn btn-primary visible-xs-inline-block visible-sm-inline-block pull-right"
+   ng-click="$emit('menu::toggle')">
+    <i class="fa fa-bars"></i>
+</a>
 
 <script>
     angular.module('aside.menu')
             .config(function ($stateProvider) {
                 $stateProvider
                         .state('products', {
-                            url: '/products'
+                            url: '/products',
+                            template: 'products'
                         })
                         .state('shops', {
                             url: '/shops',
@@ -40,10 +46,11 @@
                         })
                         .state('shops.item', {
                             url: '/:id',
-                            template: 'shop jakis'
+                            template: 'some shop'
                         })
                         .state('contact', {
-                            url: '/contact'
+                            url: '/contact',
+                            template: 'contact'
                         })
                         .state('faq', {
                             url: '/faq',
