@@ -1,46 +1,39 @@
-[
-  {
-    "index": 0,
-    "id": "produkty",
-    "name": "PRODUKTY",
-    "link": "/produkty",
-    "icon": "fa-beer"
-  },
-  {
-    "index": 1,
-    "id": "sklepy",
-    "name": "SKLEPY",
-    "link": "",
-    "icon": "fa-shopping-cart",
-    "submenu": [
-      {
-        "index": "shop1",
-        "id": "katowice",
-        "link": "/shops/shop1",
-        "name": "KATOWICE",
-        "icon": "fa-building-o"
-      },
-      {
-        "index": "shop2",
-        "id": "warszawa",
-        "link": "/shops/shop2",
-        "name": "WARSZAWA",
-        "icon": "fa-building-o"
-      }
-    ]
-  },
-  {
-    "index": 2,
-    "id": "contact",
-    "name": "KONTAKT",
-    "link": "/contact",
-    "icon": "fa-envelope"
-  },
-  {
-    "index": 3,
-    "id": "faq",
-    "name": "FAQ",
-    "link": "/faq",
-    "icon": "fa-info-circle"
-  }
-]
+{
+  "status": "OK",
+  "data": [
+    {
+      "name": "Produkty",
+      "link": "products",
+      "icon": "fa-beer"
+    },
+    {
+      "name": "Sklepy",
+      "link": "",
+      "icon": "fa-shopping-cart",
+      "submenu": [
+        {
+          "index": "shop1",
+          "link": "shops.item",
+          "name": "Katowice",
+          "icon": "fa-building-o"
+        },
+        {
+          "index": "shop2",
+          "link": "shops.item",
+          "name": "Warszawa",
+          "icon": "fa-building-o"
+        }
+      ]
+    },
+    {
+      "name": "Kontakt",
+      "link": "contact",
+      "icon": "fa-envelope"
+    },
+    {
+      "name": "Faq",
+      "link": "faq",
+      "icon": "fa-info-circle"
+    }
+  ]
+}

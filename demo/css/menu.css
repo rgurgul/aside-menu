@@ -1,37 +1,42 @@
-.menu-container .menu-main .list-group-item {
-  border-radius: 0;
-  border-left: 0;
-  border-right: 0;
-  border-color: #000000; }
-.menu-container .menu-main li {
-  padding: 0;
-  font-weight: 400;
-  color: silver; }
-.menu-container .menu-main .menu-item-box {
-  cursor: pointer;
-  background-color: #2F4050; }
-  .menu-container .menu-main .menu-item-box .menu-item {
-    padding: 14px 10px; }
-    .menu-container .menu-main .menu-item-box .menu-item:hover {
-      color: white; }
-    .menu-container .menu-main .menu-item-box .menu-item .fa {
-      padding: 3px; }
-      .menu-container .menu-main .menu-item-box .menu-item .fa.pull-right {
-        font-size: 12px;
-        margin-top: 3px; }
-.menu-container .menu-main .submenu {
-  margin: 0;
-  padding: 0; }
-  .menu-container .menu-main .submenu li {
-    line-height: 24px;
-    border-top: 1px solid #2F4050;
-    color: black; }
-    .menu-container .menu-main .submenu li .menu-item {
-      padding: 8px 10px; }
-      .menu-container .menu-main .submenu li .menu-item .fa {
-        padding: 5px; }
-.menu-container .menu-main .active {
-  background-color: #18A689 !important;
-  color: white !important; }
+.menu-main {
+  position: relative; }
+  .menu-main .mini {
+    position: absolute;
+    top: -32px;
+    right: 0; }
+  .menu-main .list-group-item {
+    border-radius: 0;
+    border-left: 0;
+    border-right: 0;
+    border-color: #233645; }
+  .menu-main li {
+    padding: 0;
+    font-weight: 400;
+    color: silver; }
+  .menu-main .menu-item-box {
+    cursor: pointer;
+    background-color: #2F4050; }
+    .menu-main .menu-item-box .menu-item {
+      padding: 10px; }
+      .menu-main .menu-item-box .menu-item:hover {
+        color: white; }
+      .menu-main .menu-item-box .menu-item .fa {
+        padding: 3px; }
+        .menu-main .menu-item-box .menu-item .fa.pull-right {
+          font-size: 12px;
+          margin-top: 3px; }
+  .menu-main .submenu {
+    margin: 0;
+    padding: 0; }
+    .menu-main .submenu li {
+      line-height: 24px;
+      border-top: 1px solid #2F4050; }
+      .menu-main .submenu li .menu-item {
+        padding: 6px 10px; }
+        .menu-main .submenu li .menu-item .fa {
+          padding: 5px; }
+  .menu-main .active {
+    border-left: 3px solid #18A689;
+    color: white !important; }
 
 /*# sourceMappingURL=menu.css.map */

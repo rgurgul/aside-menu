@@ -1,2 +1,1 @@
--Check the demo for an example how it works. More instructions will follow...
-+Check the [demo]() for an example on how it works.
+Check the [demo](http://rgurgul.github.io/aside-menu/demo) for an example on how it works.

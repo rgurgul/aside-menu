@@ -1,20 +1,63 @@
 <!DOCTYPE html>
-<html>
+<html style="height: 100%;">
 <head lang="en">
     <meta charset="UTF-8">
     <title></title>
     <link rel="stylesheet" href="../libs/bootstrap/dist/css/bootstrap.css"/>
     <link rel="stylesheet" href="../libs/font-awesome/css/font-awesome.css"/>
     <link rel="stylesheet" href="css/menu.css"/>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=latin,latin-ext'
+          rel='stylesheet' type='text/css'>
     <script src="../libs/angular/angular.js"></script>
+    <script src="../libs/angular-ui-router/release/angular-ui-router.js"></script>
     <script src="../libs/jquery/dist/jquery.js"></script>
     <script src="../src/aside.menu.js"></script>
 </head>
-<body ng-app="aside.menu">
+<body ng-app="aside.menu"
+      style="font-family: 'open sans', sans-serif;font-size: 13px; color: #676a6c;">
 
-<div class="col-lg-2" style="background-color: #293846;">
+<div class="pull-left visible-md visible-lg"
+     style="background-color: #293846; width: 240px; height: 100%; position: fixed;">
+    <br/>
+    <br/>
     <aside-menu items="menu.json"></aside-menu>
 </div>
+
+<div style="margin-left: 300px;">
+    <ui-view></ui-view>
+</div>
+
+<a class="btn btn-primary visible-xs-inline-block visible-sm-inline-block pull-right"
+   ng-click="$emit('menu::toggle')">
+    <i class="fa fa-bars"></i>
+</a>
+
+<script>
+    angular.module('aside.menu')
+            .config(function ($stateProvider) {
+                $stateProvider
+                        .state('products', {
+                            url: '/products',
+                            template: 'products'
+                        })
+                        .state('shops', {
+                            url: '/shops',
+                            template: '<ui-view></ui-view>'
+                        })
+                        .state('shops.item', {
+                            url: '/:id',
+                            template: 'some shop'
+                        })
+                        .state('contact', {
+                            url: '/contact',
+                            template: 'contact'
+                        })
+                        .state('faq', {
+                            url: '/faq',
+                            template: "<div>faq</div>"
+                        });
+            })
+</script>
 
 </body>
 </html>
