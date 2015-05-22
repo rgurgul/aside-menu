@@ -3,7 +3,7 @@
   "data": [
     {
       "name": "Produkty",
-      "link": "products",
+      "link": "product-list",
       "icon": "fa-beer"
     },
     {
