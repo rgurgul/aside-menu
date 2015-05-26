@@ -6,6 +6,7 @@ angular.module('aside.menu', ['menu-tpl.html', 'menu-item-tpl.html', 'ui.router'
     .directive('asideMenu', function ($http) {
         return {
             restrict: 'E',
+            scope: true,
             templateUrl: "menu-tpl.html",
             controller: function ($scope, $element, $attrs) {
                 $http.get($attrs.items)
