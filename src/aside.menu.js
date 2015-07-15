@@ -1,8 +1,15 @@
 /**
  * Created by Robert Gurgul on 2015-03-15.
  */
+angular.module("tpls", []).run(function ($templateCache) {
+    $templateCache.put("menu-tpl.html",
+        "<div class=\"menu-main\">\n    <i class=\"mini fa fa-arrow-circle-left pull-right fa-3x visible-xs visible-sm\"\n       ng-click=\"$broadcast(\'menu::toggle\')\"></i>\n    <ul class=\'list-group list-unstyled\'>\n        <li ng-repeat=\"item in items\" class=\"list-group-item menu-item-box no-select\">\n            <menu-item class=\"menu-item\" link=\"{{item.link}}\" index=\"{{item.index}}\">\n                <i class=\"fa {{item.icon}} pull-left\"></i>\n            </menu-item>\n            <ul ng-if=\"item.submenu\" class=\"submenu list-unstyled\" style=\"display: none\">\n                <li ng-repeat=\"item in item.submenu\">\n                    <menu-item class=\"menu-item sub-item\" link=\"{{item.link}}\" index=\"{{item.index}}\" score=\"{{item.score}}\">\n                        <i class=\"fa {{item.icon}} pull-left\"></i>\n                    </menu-item>\n                </li>\n            </ul>\n        </li>\n    </ul>\n</div>");
 
-angular.module('aside.menu', ['menu-tpl.html', 'menu-item-tpl.html', 'ui.router'])
+    $templateCache.put("menu-item-tpl.html",
+        "<div>\n    <span ng-transclude></span>\n    <div class=\"menu-title\" ng-class=\"{\'pull-left\': item.submenu}\">{{ item.name }}</div>\n    <i class=\"fa fa-chevron-right pull-right\" ng-if=\"item.submenu\"></i>\n    <div class=\"clearfix\"></div>\n</div>");
+});
+
+angular.module('aside.menu', ['tpls', 'ui.router'])
     .directive('asideMenu', function ($http) {
         return {
             restrict: 'E',
@@ -78,12 +85,3 @@ angular.module('aside.menu', ['menu-tpl.html', 'menu-item-tpl.html', 'ui.router'
         }
     });
 
-angular.module("menu-tpl.html", []).run(function ($templateCache) {
-    $templateCache.put("menu-tpl.html",
-        "<div class=\"menu-main\">\n    <i class=\"mini fa fa-arrow-circle-left pull-right fa-3x visible-xs visible-sm\"\n       ng-click=\"$broadcast(\'menu::toggle\')\"></i>\n    <ul class=\'list-group list-unstyled\'>\n        <li ng-repeat=\"item in items\" class=\"list-group-item menu-item-box no-select\">\n            <menu-item class=\"menu-item\" link=\"{{item.link}}\" index=\"{{item.index}}\">\n                <i class=\"fa {{item.icon}} pull-left\"></i>\n            </menu-item>\n            <ul ng-if=\"item.submenu\" class=\"submenu list-unstyled\" style=\"display: none\">\n                <li ng-repeat=\"item in item.submenu\">\n                    <menu-item class=\"menu-item sub-item\" link=\"{{item.link}}\" index=\"{{item.index}}\" score=\"{{item.score}}\">\n                        <i class=\"fa {{item.icon}} pull-left\"></i>\n                    </menu-item>\n                </li>\n            </ul>\n        </li>\n    </ul>\n</div>");
-});
-
-angular.module("menu-item-tpl.html", []).run(function ($templateCache) {
-    $templateCache.put("menu-item-tpl.html",
-        "<div>\n    <span ng-transclude></span>\n    <div class=\"menu-title\" ng-class=\"{\'pull-left\': item.submenu}\">{{ item.name }}</div>\n    <i class=\"fa fa-chevron-right pull-right\" ng-if=\"item.submenu\"></i>\n    <div class=\"clearfix\"></div>\n</div>");
-});
