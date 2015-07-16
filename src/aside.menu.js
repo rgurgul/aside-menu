@@ -9,7 +9,7 @@ angular.module("tpls", []).run(function ($templateCache) {
         "<div>\n    <span ng-transclude></span>\n    <div class=\"menu-title\" ng-class=\"{\'pull-left\': item.submenu}\">{{ item.name }}</div>\n    <i class=\"fa fa-chevron-right pull-right\" ng-if=\"item.submenu\"></i>\n    <div class=\"clearfix\"></div>\n</div>");
 });
 
-angular.module('aside.menu', ['tpls', 'ui.router'])
+angular.module('aside.menu', ['ui.router', 'tpls'])
     .directive('asideMenu', function ($http) {
         return {
             restrict: 'E',
@@ -20,7 +20,7 @@ angular.module('aside.menu', ['tpls', 'ui.router'])
                     .success(function (responseData) {
                         $scope.items = responseData.data;
                     });
-                $scope.$on('menu::toggle', function () {
+                $scope.$root.$on('menu::toggle', function () {
                     $element.parent().toggleClass('visible-md').toggleClass('visible-lg');
                 });
                 this.toggleSubmenu = function (el, iconContainer, cleanSubmenu) {
